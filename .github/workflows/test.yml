@@ -11,6 +11,5 @@ jobs:
     - uses: actions/setup-go@v1
       with:
         go-version: 1.16
-    - run: sudo apt-get install graphviz
     - run: bash test
     - run: bash <(curl -s https://codecov.io/bash) -t ${{ secrets.CODECOV_TOKEN }}
